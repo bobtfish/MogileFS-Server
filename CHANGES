@@ -1,3 +1,7 @@
+   * Add optional 'size' parameter to the create_open command, which if supplied
+     will be used as a size in bytes to filter devices returned to have at least
+     that much free space. (Tomas Doran)
+
 2012-01-31: Release version 2.57
 
    * Silence a warning about undefined value introduced by the slave database ordering work (hachi@kuiki.net)
