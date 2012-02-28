@@ -63,7 +63,7 @@ sub delete {
     my $httpsock = IO::Socket::INET->new(PeerAddr => $host, PeerPort => $port, Timeout => 2)
         or die "can't connect to $host:$port in 2 seconds";
 
-    $httpsock->write("DELETE $self->{uri} HTTP/1.0\r\nConnection: keep-alive\r\n\r\n");
+    $httpsock->write("DELETE $self->{uri} HTTP/1.0\r\n\r\n");
 
     my $keep_alive = 0;
     my $did_del    = 0;

@@ -2,6 +2,10 @@
      will be used as a size in bytes to filter devices returned to have at least
      that much free space. (Tomas Doran)
 
+   * Stop delete requests made by MogileFS::HTTPFile from having keepalive
+     enabled. If you do a lot of delete work, then the HTTP parser is
+     to simple and can get confused.
+
 2012-01-31: Release version 2.57
 
    * Silence a warning about undefined value introduced by the slave database ordering work (hachi@kuiki.net)
